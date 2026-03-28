@@ -9,12 +9,16 @@ export default function Index() {
 
   return (
     <View style={styles.contenitore}>
-      <Text>Counting </Text>
-
-      <Button onPress={increment} title="Aumenta" />
-      <Button onPress={resetCount} title="Reset" />
-      <Button onPress={decrement} title="Diminuisci" />
-
+      <Text style={styles.mainTitle}>Counting </Text>
+      <View style={styles.bottoni}>
+        <Button onPress={increment} title="Aumenta" />
+      </View>
+      <View style={styles.bottoni}>
+        <Button onPress={resetCount} title="Reset" />
+      </View>
+      <View style={styles.bottoni}>
+        <Button onPress={decrement} title="Diminuisci" />
+      </View>
       <Text> conteggio: {counter}</Text>
     </View>
   );
@@ -25,5 +29,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+
+  bottoni: {
+    borderRadius: 15,
+    marginBottom: 20,
+  },
+
+  mainTitle: {
+    fontSize: 30,
+    marginBottom: 15,
   },
 });
