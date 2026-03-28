@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 export default function Index() {
   const [counter, setCounter] = useState(0);
-  const [active, setActive] = useState("verde");
 
   const increment = () => setCounter(counter + 1);
   const resetCount = () => setCounter(0);
@@ -26,10 +25,7 @@ export default function Index() {
           disabled={counter <= -10}
         />
       </View>
-      <Text style={[styles.empty, { color: coloreTesto }]}>
-        {" "}
-        conteggio: {counter}
-      </Text>
+      <Text style={{ color: coloreTesto }}> conteggio: {counter}</Text>
     </View>
   );
 }
